@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const JobList = ({ jobs, onApply }) => {
+const JobList = ({ jobs, onApply, submissionStatus }) => {
   const [repoUrls, setRepoUrls] = useState({});
 
   const onChangeInput = (e, jobId) => {
@@ -91,6 +91,10 @@ const JobList = ({ jobs, onApply }) => {
             >
               Submit
             </button>
+
+            {submissionStatus[job.id] && (
+              <p style={{ color: "green" }}>{submissionStatus[job.id]}</p>
+            )}
           </div>
         ))}
       </div>

@@ -9,6 +9,7 @@ const App = () => {
   const [candidate, setCandidate] = useState(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
+  const [submissionStatus, setSubmissionStatus] = useState({});
 
   useEffect(() => {
     const loadData = async () => {
@@ -38,6 +39,11 @@ const App = () => {
         jobId,
         repoUrl,
       });
+
+      setSubmissionStatus((prev) => ({
+        ...prev,
+        [jobId]: "Application submitted successfully! 🎉",
+      }));
     } catch (err) {
       setError(err.message || "Error applying to job");
     }
@@ -51,7 +57,13 @@ const App = () => {
     return <Error message={error} />;
   }
 
-  return <JobList jobs={jobs} onApply={handleApply} />;
+  return (
+    <JobList
+      jobs={jobs}
+      onApply={handleApply}
+      submissionStatus={submissionStatus}
+    />
+  );
 };
 
 export default App;
