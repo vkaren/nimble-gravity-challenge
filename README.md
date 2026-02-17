@@ -1,71 +1,96 @@
-# Getting Started with Create React App
+# Nimble Gravity Challenge
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is a solution for the Nimble Gravity technical challenge for the **Junior Fullstack Developer** role.
 
-## Available Scripts
+## 🚀 Overview
 
-In the project directory, you can run:
+This is a small React application that allows a candidate to:
 
-### `npm start`
+- Fetch their candidate data using their email
+- Retrieve a list of available job positions
+- Submit a job application by providing a GitHub repository URL
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 🛠️ Tech Stack
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- React
+- JavaScript (ES6+)
+- Fetch API
+- CSS
 
-### `npm test`
+## 📦 Project Structure
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```
+src/
+  App/
+    index.jsx
+  components/
+    JobList/
+    States/
+      Error.jsx
+      Loading.jsx
+  services/
+    api.js
+```
 
-### `npm run build`
+## ⚙️ Installation & Setup
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. Clone the repository:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```bash
+git clone https://github.com/vkaren/nimble-gravity-challenge.git
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+2. Install dependencies:
 
-### `npm run eject`
+```bash
+npm install
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+3. Run the app:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+npm start
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+The app will run on:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```
+http://localhost:3000
+```
 
-## Learn More
+## 🔌 API Endpoints
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Base URL:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```
+https://botfilter-h5ddh6dye8exb7ha.centralus-01.azurewebsites.net
+```
 
-### Code Splitting
+Endpoints used:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- `GET /api/candidate/get-by-email`
+- `GET /api/jobs/get-list`
+- `POST /api/candidate/apply-to-job`
 
-### Analyzing the Bundle Size
+## ✅ Features
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- Fetch candidate data and job listings
+- Display job positions dynamically
+- Input field for GitHub repository per job
+- Submit application per job
+- Loading and error handling
 
-### Making a Progressive Web App
+## ⚠️ Notes
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- The application handles API errors and displays feedback to the user.
+- Each job input is managed independently.
+- Accessibility considerations were applied (labels associated with inputs).
 
-### Advanced Configuration
+## 💡 Improvements (Future Work)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- Improve form validation
+- Add better styling and responsiveness
 
-### Deployment
+## 👩‍💻 Author
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# nimble-gravity-challenge
+Karen Varela
